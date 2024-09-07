@@ -1,14 +1,9 @@
-from sqlalchemy import create_engine
-from app.models import Base
-import os
+import asyncio
+from book_management_system.app.database import engine
+from book_management_system.app.models import Base
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+async def create_tables():
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
 
-engine = create_engine(DATABASE_URL)
-
-def create_tables():
-    Base.metadata.create_all(bind=engine)
-
-if __name__ == "__main__":
-    create_tables()
-    print("Tables created successfully.")
+asyncio.run(create_tables())
