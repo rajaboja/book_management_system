@@ -45,7 +45,7 @@ To run this project, you need to set up the following environment variables:
 2. Open the `.env` file and update the values:
 
    - `DATABASE_URL`: This should match the URL in your `docker-compose.yml` file. The default value should work if you haven't changed the database configuration.
-   - `GROK_API_KEY`: Replace `your_grok_api_key_here` with your actual Grok API key.
+   - `GROQ_API_KEY`: Replace `your_groq_api_key_here` with your actual Groq API key.
 
 3. Make sure not to commit your `.env` file to version control. It should be listed in your `.gitignore` file.
 
