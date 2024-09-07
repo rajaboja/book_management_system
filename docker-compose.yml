@@ -7,8 +7,11 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    env_file:
+      - .env
     environment:
-      - DATABASE_URL=postgresql+asyncpg://user:password@db/book_management
+      - DATABASE_URL=${DATABASE_URL}
+      - GROK_API_KEY=${GROK_API_KEY}
 
   db:
     image: postgres:13
