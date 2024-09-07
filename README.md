@@ -32,11 +32,3 @@ This project implements an intelligent book management system using Python, Fast
 ## Usage
 
 Use the API endpoints to manage books, add reviews, generate summaries, and get recommendations.
-
-## Running Tests
-
-To run the tests, use the following command inside the Docker container:
-
-```
-pytest tests/test_api.py
-```
