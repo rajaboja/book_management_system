@@ -26,6 +26,7 @@ This project implements an intelligent book management system using Python, Fast
    ```
    docker-compose up --build
    ```
+   This will create the necessary database tables and start the application.
 
 5. The application will be available at `http://localhost:8000`
 
