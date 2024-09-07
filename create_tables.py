@@ -1,6 +1,6 @@
 import asyncio
-from book_management_system.app.database import engine
-from book_management_system.app.models import Base
+from app.database import engine
+from app.models import Base
 
 async def create_tables():
     async with engine.begin() as conn:
